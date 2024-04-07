@@ -10,6 +10,7 @@ import About from "./pages/About";
 import BrowseMentor from "./components/BrowseMentor";
 import { useEffect, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
+import MentorProfile from "./components/MentorProfile";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -32,17 +33,17 @@ function App() {
           path="/signup"
           element={<Signup setIsLoggedIn={setIsLoggedIn} />}
         />
+        <Route path="/mentor/profile/:id" element={<MentorProfile />} />
         <Route
           path="/dashboard"
           element={
             <PrivateRoute isLoggedIn={isLoggedIn}>
               <Dashboard />
-
-
             </PrivateRoute>
           }
         />
       </Routes>
+
     </div>
   );
 }
