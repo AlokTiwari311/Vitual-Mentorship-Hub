@@ -11,6 +11,7 @@ import BrowseMentor from "./components/BrowseMentor";
 import { useEffect, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
 import MentorProfile from "./components/MentorProfile";
+import ChatSection from "./components/Chat";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +35,7 @@ function App() {
           element={<Signup setIsLoggedIn={setIsLoggedIn} />}
         />
         <Route path="/mentor/profile/:id" element={<MentorProfile />} />
+        <Route path="/chat" element={<ChatSection />} />
         <Route
           path="/dashboard"
           element={
