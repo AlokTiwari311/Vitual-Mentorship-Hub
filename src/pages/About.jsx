@@ -3,12 +3,12 @@ import image2 from "../assets/image1.jpg";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function About() {
-  let message = `Welcome to our vibrant team, where collaboration, innovation, and passion converge to drive excellence and achieve remarkable results. Meet the dedicated individuals who form the backbone of our organization.`;
+  let message = `Welcome to our vibrant team, where collaboration, innovation, and passion converge to drive excellence and achieve remarkable results.Meet the dedicated individuals who form the backbone of our organization.`;
 
   const renderTeamMember = (name, role, imageUrl, linkedinUrl, instagramUrl) => (
     <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
       <div className="overflow-hidden shadow-lg rounded-lg transition-all duration-300 hover:bg-[#2BB17A] hover:shadow-xl hover:-translate-y-1">
-        <img src="" className="align-middle" alt={name} />
+        <img src={imageUrl} className="align-middle" alt={name} />
         <div className="px-6 py-4">
           <h3 className="text-xl font-semibold mb-1 hover:text-white">{name}</h3>
           <p className="text-gray-800 text-sm mb-3 hover:text-white">{role}</p>
@@ -33,11 +33,11 @@ function About() {
   );
 
   const teamMembers = [
-    { name: "Alok Tiwari", role: "Team Member", imageUrl: image2, linkedinUrl: "https://www.linkedin.com/in/alok-tiwari-714230241/", instagramUrl: "https://www.instagram.com/aloktiwari311/" },
-    { name: "Shashi Bharti", role: "Team Member", imageUrl: image2, linkedinUrl: "https://www.linkedin.com/in/shashi-bharti-53367722b/", instagramUrl: "https://www.instagram.com/shashi_bharti9567/" },
-    { name: "Bhawar Syal", role: "Team Member", imageUrl: image2, linkedinUrl: "https://www.linkedin.com/in/bhawar-syal-5ab224251/", instagramUrl: "#" },
-    { name: "Mayank Chaturvedi", role: "Team Member", imageUrl: image2, linkedinUrl: "https://www.linkedin.com/in/mayank-chaturvedi-680944241/", instagramUrl: "https://www.instagram.com/mayank.ch11/" },
-    { name: "Rohit Mishra", role: "Team Member", imageUrl: image2, linkedinUrl: "https://www.linkedin.com/in/rohit-mishra954/", instagramUrl: "https://www.instagram.com/rohit_mishra954/" }
+    { name: "Alok Tiwari", role: "Team Member", imageUrl: "https://i.pinimg.com/736x/8d/12/49/8d1249009c78480d4f773714179f8d8f.jpg" },
+    { name: "Shashi Bharti", role: "Team Member", imageUrl: "https://i.pinimg.com/564x/1b/5a/fc/1b5afcb11cf991f12df448121d0ab279.jpg", linkedinUrl: "https://www.linkedin.com/in/shashi-bharti-53367722b/", instagramUrl: "https://www.instagram.com/shashi_bharti9567/" },
+    { name: "Bhawar Syal", role: "Team Member", imageUrl: "https://i.pinimg.com/736x/77/b1/61/77b161da704a50108bc74178ef490259.jpg", linkedinUrl: "https://www.linkedin.com/in/bhawar-syal-5ab224251/", instagramUrl: "#" },
+    { name: "Mayank Chaturvedi", role: "Team Member", imageUrl: "https://i.pinimg.com/564x/a3/a8/39/a3a8396e0b931003fac47906ca7b691c.jpg", linkedinUrl: "https://www.linkedin.com/in/mayank-chaturvedi-680944241/", instagramUrl: "https://www.instagram.com/mayank.ch11/" },
+    { name: "Rohit Mishra", role: "Team Member", imageUrl: "https://i.pinimg.com/564x/8c/41/e6/8c41e6dcb42734e8e77a83761fededc3.jpg", linkedinUrl: "https://www.linkedin.com/in/rohit-mishra954/", instagramUrl: "https://www.instagram.com/rohit_mishra954/" }
   ];
 
   return (
