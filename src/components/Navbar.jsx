@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo vmh.png";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
@@ -12,7 +12,7 @@ const Navbar = (props) => {
     <nav className="bg-[#2BB17A]">
       <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
         <Link to="/">
-          <img src={logo} alt="Logo" width={80} height={22} loading="lazy" />
+          <img src={logo} alt="Logo" width={150} height={22} loading="lazy" />
         </Link>
 
         <div className="hidden md:flex items-center gap-x-8">
@@ -76,7 +76,7 @@ const Navbar = (props) => {
               <li>
                 {isLoggedIn && (
                   <Link to="/dashboard">
-                    <button className="nav-btn">Dashboard</button>
+                    <button className="nav-btn text-white">Dashboard</button>
                   </Link>
                 )}
               </li>
@@ -119,12 +119,17 @@ const Navbar = (props) => {
           {/* Login - SignUp - LogOut - Dashboard */}
           {!isLoggedIn && (
             <Link to="/login">
-              <button className="nav-btn">Log in</button>
+              <button className="nav-btn text-green-700 py-2 px-4 mx-1 bg-green-200 rounded-md">Log in</button>
             </Link>
           )}
           {!isLoggedIn && (
             <Link to="/signup">
-              <button className="nav-btn">Sign up</button>
+              <button className="nav-btn  text-green-700 py-2 px-4 mx-1 bg-green-200 rounded-md">Sign up</button>
+            </Link>
+          )}
+          {isLoggedIn && (
+            <Link to="/dashboard">
+              <button className="nav-btn  text-green-700 py-2 px-4 mx-1 bg-green-100 rounded-md">Dashboard</button>
             </Link>
           )}
           {isLoggedIn && (
@@ -134,17 +139,13 @@ const Navbar = (props) => {
                   setIsLoggedIn(false);
                   toast.success("Logged Out");
                 }}
-                className="nav-btn"
+                className="nav-btn  text-green-700 py-2 px-4 mx-1 bg-green-200 rounded-md"
               >
                 Log Out
               </button>
             </Link>
           )}
-          {isLoggedIn && (
-            <Link to="/dashboard">
-              <button className="nav-btn">Dashboard</button>
-            </Link>
-          )}
+
         </div>
       </div>
     </nav>
